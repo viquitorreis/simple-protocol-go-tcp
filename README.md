@@ -6,16 +6,17 @@ The advantage of a text based protocol is that a client can practically open a T
 
 ## Commands:
 
-[Command | Transmitter | Description]
+| Command | Transmitter | Description                                               |
+|---------|-------------|-----------------------------------------------------------|
+| **REG** | Client      | Register as client                                        |
+| **JOIN** | Client     | Join a channel                                            |
+| **LEAVE** | Client    | Leave a channel                                           |
+| **MSG** | Both        | Send or receive a message to/from entity (channel or user)|
+| **CHNS** | Client     | List available channels                                   |
+| **USRS** | Client     | List users                                                |
+| **OK** | Server       | Command acknowledgement                                   |
+| **ERR** | Server      | Error                                                     |
 
-**REG**	    Client	Register as client
-**JOIN**	Client	Join a channel
-**LEAVE**	Client	Leave a channel
-**MSG**	    Both	Send or receive a message to/from entity (channel or user)
-**CHNS**	Client	List available channels
-**USRS**	Client	List users
-**OK**	    Server	Command acknowledgement
-**ERR**	    Server	Error
 
 Syntax:
 
@@ -51,7 +52,7 @@ telnet 127.0.0.1 8081
 
 This will be the client.
 
-We can make some testings with 2 clients:
+Testing with 2 clients:
 
 ![2 Clients tests](1.png)
 
